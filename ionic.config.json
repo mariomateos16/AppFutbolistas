@@ -1,0 +1,7 @@
+{
+  "name": "futbolistas-firestore",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
