@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+<ion-header>
+  <ion-toolbar>
+    <ion-title>LaLiga Santander</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-img id="logo" src="https://assets.laliga.com/assets/logos/laliga-h/laliga-h-1200x1200.png"></ion-img>
+    <ion-card-header>
+      <ion-card-title>¿Qué es La Liga Santander?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      La Liga Santander es la máxima competición de fútbol en España, con 20 equipos compitiendo durante toda la temporada para determinar el campeón. La temporada 2022-2023 es la 93ª edición de la competición.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Equipos de La Liga Santander</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li>Real Madrid</li>
+        <li>Barcelona</li>
+        <li>Atlético de Madrid</li>
+        <li>Sevilla</li>
+        <li>Valencia</li>
+        <li>Athletic Club</li>
+        <li>Villarreal</li>
+        <li>Real Sociedad</li>
+        <li>Real Betis</li>
+        <li>Cadiz</li>
+        <li>... y otros 9 equipos más</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Últimos campeones</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li>2021-2022: Real Madrid</li>
+        <li>2020-2021: Atlético de Madrid</li>
+        <li>2019-2020: Real Madrid</li>
+        <li>2018-2019: Barcelona</li>
+        <li>2017-2018: Barcelona</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>LOCALIZACIÓN</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <h1>Nos encontramos en C. de Torrelaguna, 60, 28043 Madrid</h1>
+    </ion-card-content>
+  </ion-card>
+  <br><br>
+  <div id="mapId" style="width:80%; height:80%; display: block; margin: 0 auto;"></div>
+  <br><br><br><br>
+</ion-content>
+
+<ion-toolbar>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button  tab="home">
+        <ion-icon  class="iconos" name="football-outline"></ion-icon>
+        INICIO 
+      </ion-tab-button>
+      <ion-tab-button tab="pagina2">
+        <ion-icon class="iconos" name="help-circle-outline"></ion-icon>
+         INFO
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-toolbar>

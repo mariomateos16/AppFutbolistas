@@ -1,0 +1,71 @@
+<ion-header class="ion-text-center">
+  <ion-toolbar class="titulo">
+    <ion-title>Información del Futbolista</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content >
+  <ion-content [fullscreen]="true">
+  <br>
+  <img id="imagen" src='{{ document.data.imagen }}'>
+    <ion-item>
+      <ion-label>Nombre:</ion-label>
+      <ion-input [(ngModel)]="document.data.nombre"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Apellido:</ion-label>
+      <ion-input [(ngModel)]="document.data.apellido"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Edad:</ion-label>
+      <ion-input [(ngModel)]="document.data.edad"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Posición:</ion-label>
+      <ion-input [(ngModel)]="document.data.posicion"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Equipo:</ion-label>
+      <ion-input [(ngModel)]="document.data.equipo"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Nacionalidad:</ion-label>
+      <ion-input [(ngModel)]="document.data.nacionalidad"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Goles:</ion-label>
+      <ion-input [(ngModel)]="document.data.goles"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Asistencias:</ion-label>
+      <ion-input [(ngModel)]="document.data.asistencias"></ion-input>
+    </ion-item>
+    
+  <!-- BOTON BORRAR -->
+  <ion-button id="borrar" color="danger" (click)="clickBotonBorrar()">Borrar</ion-button>
+
+  <!-- BOTON MODIFICAR -->
+  <ion-button id="modificar" (click)="clickBotonModificar()">{{ isNew ? 'Guardar' : 'Modificar' }}</ion-button>
+  <br>
+  <!-- BOTON CARGAR IMAGEN -->
+  <ion-button id="botonImagen" color="success" (click)="uploadImagePicker()">Cargar Imagen</ion-button>
+  
+  <!-- BOTON BORRAR IMAGEN -->
+  <ion-button id="borrarImagen" color="success" (click)="uploadImagePicker()">Borrar Imagen</ion-button>
+  <br>
+  <ion-icon id="share" name="share-social-outline" (click)="compartir()">Compartir</ion-icon>
+  <br>
+  <!-- BOTON VOLVER -->
+  <ion-button id="volver" color="medium" (click)="clickVolver()">Volver</ion-button>
+  
+
+</ion-content>
+
+
+

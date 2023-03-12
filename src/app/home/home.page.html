@@ -1,51 +1,57 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header class="ion-text-center">
+  <ion-toolbar class="titulo">
     <ion-title>
-      Futbolistas
+      LaLiga Santander
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-item>
-    <ion-label>Nombre</ion-label>
-    <ion-input [(ngModel)]="futbolistaEditando.nombre"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Apellido</ion-label>
-    <ion-input [(ngModel)]="futbolistaEditando.apellido"></ion-input>
-  </ion-item>
   
-  <ion-item>
-    <ion-label>Equipo</ion-label>
-    <ion-input [(ngModel)]="futbolistaEditando.equipo"></ion-input>
-  </ion-item>
-  
-  <ion-item>
-    <ion-label>Nacionalidad</ion-label>
-    <ion-input [(ngModel)]="futbolistaEditando.nacionalidad"></ion-input>
-  </ion-item>
-  
-  <ion-button (click)="clickBotonInsertar()">Añadir Futbolista</ion-button>
-  
-  <h1>LISTA DE FUTBOLISTAS</h1>
+  <h1 class="ion-text-center">Jugadores LaLiga Santander 2022/2023</h1>
+  <ion-img id="logo" src="https://assets.laliga.com/assets/logos/laliga-v/laliga-v-1200x1200.jpg"></ion-img>
   <ion-list>
-      <ion-item *ngFor="let documentTarea of arrayColeccionFutbolistas">
+      <ion-item *ngFor="let documentFutbolista of arrayColeccionFutbolistas" (click)="selecFutbo(documentFutbolista)">
         <ion-grid>
           <ion-row>
-            <h2>{{ documentTarea.data.nombre }}</h2>
+            <img id="imagen" src='{{ documentFutbolista.data.imagen }}'>
           </ion-row>
           <ion-row>
-            <h2>{{ documentTarea.data.apellido }}</h2>
+            <h2>{{ documentFutbolista.data.nombre }}</h2>&nbsp;&nbsp;<h2>{{ documentFutbolista.data.apellido }}</h2>
           </ion-row>
           <ion-row>
-            <p>{{ documentTarea.data.equipo }}</p>
+            <h4>Edad: {{ documentFutbolista.data.edad }}</h4>&nbsp;&nbsp;&nbsp;<h4>Posición: {{ documentFutbolista.data.posicion }}</h4>
           </ion-row>
           <ion-row>
-            <p>{{ documentTarea.data.nacionalidad }}</p>
+            <h4>Equipo: {{ documentFutbolista.data.equipo }}</h4>
+          </ion-row>
+          <ion-row>
+            <h4>Nacionalidad: {{ documentFutbolista.data.nacionalidad }}</h4>
+          </ion-row>
+          <ion-row>
+            <h4>Goles: {{ documentFutbolista.data.goles }}</h4>&nbsp;&nbsp;&nbsp;<h4>Asistencias: {{ documentFutbolista.data.asistencias }}</h4>
           </ion-row>
         </ion-grid>
       </ion-item>
   </ion-list>
 </ion-content>
+
+<!--  BOTON AÑADIR -->
+<ion-fab-button (click)="segPantalla()">+</ion-fab-button>
+
+<ion-toolbar>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button  tab="home">
+        <ion-icon  class="iconos" name="football-outline"></ion-icon>
+        INICIO 
+      </ion-tab-button>
+      <ion-tab-button tab="pagina2">
+        <ion-icon class="iconos" name="help-circle-outline"></ion-icon>
+         INFO
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-toolbar>
+
+ 

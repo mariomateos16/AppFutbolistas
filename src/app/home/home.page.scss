@@ -25,3 +25,34 @@
 #container a {
   text-decoration: none;
 }
+
+ion-fab-button {
+  --background: #080f79;
+  -webkit-text-fill-color: #ffffff;
+  --border-radius: 15px;
+  font-size: 30px;
+  width: 60px;
+  height: 40px;
+  position: fixed;
+  right: 50px;
+  bottom: 80px;
+}
+
+.titulo{
+  --background: #080f79;
+  -webkit-text-fill-color: #ffffff;
+}
+
+#imagen {
+  width: 200px;
+  height: 250px;
+  display: block;
+  margin: 0 auto;
+}
+
+#logo {
+  height: 150px;
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+}
