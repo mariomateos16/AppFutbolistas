@@ -3,33 +3,6 @@
     -webkit-text-fill-color: #ffffff;
   }
 
-/* #modificar {
-  width: 150px;
-  height: 60px;
-  position: fixed;
-  right: 900px;
-  bottom: 200px;
-  
-}
-
-#borrar {
-  width: 150px;
-  height: 60px;
-  position: fixed;
-  right: 700px;
-  bottom: 200px;
-
-}
-
-#volver {
-  width: 150px;
-  height: 60px;
-  position: fixed;
-  right: 500px;
-  bottom: 200px;
-
-} */
-
 #imagen {
   width: 200px;
   height: 250px;
@@ -44,6 +17,21 @@
   border-radius: 50%;
   padding: 10px;
   color: white;
+  margin: 3px;
 }
 
 
+.buttons__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons2__container {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+#volver {
+  margin-top: auto;
+}
