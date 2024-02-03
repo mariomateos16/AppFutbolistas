@@ -20,10 +20,10 @@
   margin: 3px;
 }
 
-
 .buttons__container {
   display: flex;
   justify-content: space-between;
+  padding: 1rem 1rem;
 }
 
 .buttons2__container {
@@ -34,4 +34,10 @@
 
 #volver {
   margin-top: auto;
+}
+
+#share,
+#borrar,
+#borrarImagen {
+  display: none;
 }
