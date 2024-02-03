@@ -53,17 +53,15 @@
     <ion-button id="modificar" (click)="clickBotonModificar()">{{ isNew ? 'Guardar' : 'Modificar' }}</ion-button>
     <!-- BOTON CARGAR IMAGEN -->
     <ion-button id="botonImagen" *ngIf="isNew" color="success" (click)="uploadImagePicker()">Cargar Imagen</ion-button>
+
+    <!-- BOTON VOLVER -->
+    <ion-button id="volver" color="medium" (click)="clickVolver()">Volver</ion-button>
     
     <!-- BOTON BORRAR IMAGEN -->
     <ion-button id="borrarImagen" *ngIf="!isNew" color="success" (click)="uploadImagePicker()">Borrar Imagen</ion-button>
   </div>
   <div class="buttons2__container">
-    <!-- BOTON VOLVER -->
-    <ion-button id="volver" color="medium" (click)="clickVolver()">Volver</ion-button>
     <!-- BOTON COMPARTIR -->
     <ion-icon id="share" name="share-social-outline" (click)="compartir()">Compartir</ion-icon>
   </div>  
 </ion-content>
-
-
-
